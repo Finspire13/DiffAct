@@ -1,0 +1,4 @@
+configs/*
+datasets/*
+*.sh
+temp_log_dir/*

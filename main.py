@@ -192,7 +192,7 @@ class Trainer:
         
         assert(test_dataset.mode == 'test')
         assert(mode in ['encoder', 'decoder-noagg', 'decoder-agg'])
-        assert(postprocess['type'] in ['median', 'mode', 'purge'])
+        assert(self.postprocess['type'] in ['median', 'mode', 'purge', None])
 
 
         self.model.eval()
