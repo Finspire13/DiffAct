@@ -1,4 +1,4 @@
-# DiffAct [(Project Page)]()
+# [DiffAct](https://finspire13.github.io/DiffAct-Project-Page/)
 
 Code for [Diffusion Action Segmentation](https://arxiv.org/abs/2303.17959) (ICCV 2023).
 
