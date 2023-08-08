@@ -44,7 +44,7 @@ DiffAct/
 
 ## Trained Models 
 
-* We provide some trained models and logs in the `pre_result` folder
+* We provide some trained models in the `trained_models` folder
 
 ## Citation
 
