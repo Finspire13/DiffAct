@@ -191,8 +191,10 @@ def plot_barcode(class_num, gt=None, pred=None, show=True, save_file=None):
 
     if class_num <= 10:
         color_map = plt.cm.tab10
+    elif class_num > 20:
+        color_map = plt.cm.gist_ncar
     else:
-        color_map = plt.cm.tab20 # TO Be Improved When #Class > 20
+        color_map = plt.cm.tab20
 
     axprops = dict(xticks=[], yticks=[], frameon=False)
     barprops = dict(aspect='auto', cmap=color_map, 
