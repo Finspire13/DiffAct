@@ -1,7 +1,3 @@
-import hf_env
-hf_env.set_env('202111') 
-import hfai
-
 import os
 import copy
 import torch
@@ -132,8 +128,7 @@ class Trainer:
 
             print(f'Epoch {epoch} - Running Loss {epoch_running_loss}')
         
-            if result_dir and not hfai.client.receive_suspend_command():
-            # if result_dir:
+            if result_dir:
 
                 state = {
                     'model': self.model.state_dict(),
@@ -144,14 +139,13 @@ class Trainer:
 
             if epoch % log_freq == 0:
 
-                if result_dir and not hfai.client.receive_suspend_command():
-                # if result_dir:
+                if result_dir:
 
                     torch.save(self.model.state_dict(), f'{result_dir}/epoch-{epoch}.model')
                     torch.save(state, f'{result_dir}/latest.pt')
         
                 # for mode in ['encoder', 'decoder-noagg', 'decoder-agg']:
-                for mode in ['decoder-agg']:
+                for mode in ['decoder-agg']: # Default: decoder-agg. The results of decoder-noagg are similar
 
                     test_result_dict = self.test(
                         test_test_dataset, mode, device, label_dir,
