@@ -38,7 +38,7 @@ DiffAct/
 
 ## Run
 
-* Generate config files by `python3 default_configs.py` or use the provided ones in the `configs` folder
+* Generate config files by `python3 default_configs.py`
 * Simply run `python3 main.py --config configs/some_config.json --device gpu_id`
 * Trained models and logs will be saved in the `result` folder
 
